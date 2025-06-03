@@ -7,6 +7,8 @@ int main() {
     int movimentos_torre = 5;
     int movimentos_rainha = 8;
     int movimentos_bispo = 5;
+    int movimento_baixo_cavalo = 2;
+    int movimento_esquerda_cavalo = 1;
 
     // Movimento da Torre 5 casas para a direita
     // Estrutura: for
@@ -33,6 +35,20 @@ int main() {
         printf("Direita %d\n", k + 1);
         k++;
     } while (k < movimentos_bispo);
+
+    // Movimento do Cavalo 2 casas para baixo e 1 casa para a esquerda
+    // Estrutura: for + while
+    printf("\n>>> Movimento do Cavalo:\n");
+    int l = 0;
+    while (l < movimento_esquerda_cavalo) {
+        for (int m = 0; m < movimento_baixo_cavalo; m++) {
+            printf("Baixo %d\n", m + 1);
+        }
+        printf("Esquerda %d\n", l + 1);
+        l++;
+    }
+
+    printf("\n");
 
     return 0;
 }
